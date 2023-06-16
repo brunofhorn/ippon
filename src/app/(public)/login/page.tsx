@@ -9,6 +9,7 @@ import * as yup from "yup";
 import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 
+import Logo from "@/assets/img/logo.png";
 import { Button } from "@/components/Button";
 import { Hint } from "@/components/Hint";
 import { Input } from "@/components/Input";
@@ -20,8 +21,6 @@ import Eye from "@/icons/Eye";
 import EyeClose from "@/icons/EyeClose";
 import User from "@/icons/User";
 import { IModal } from "@/interfaces/components";
-
-import Logo from "../../../assets/img/logo.png";
 
 const schema = yup.object({
     email: yup.string().required("O usuário é obrigatório."),
