@@ -9,7 +9,6 @@ import * as yup from "yup";
 import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 
-import Logo from "@/assets/img/logo.png";
 import { Button } from "@/components/Button";
 import { Hint } from "@/components/Hint";
 import { Input } from "@/components/Input";
@@ -21,6 +20,7 @@ import Eye from "@/icons/Eye";
 import EyeClose from "@/icons/EyeClose";
 import User from "@/icons/User";
 import { IModal } from "@/interfaces/components";
+import { Logomarca } from "@/utils/images";
 
 const schema = yup.object({
     email: yup.string().required("O usuário é obrigatório."),
@@ -107,7 +107,7 @@ export default async function Login() {
                 <div className="flex justify-center items-center w-3/5 bg-white shadow-md rounded-ss-3xl rounded-es-3xl h-screen">
                     <div className="flex flex-col pr-10 pb-0 pl-6 gap-8 items-center justify-center flex flex-1">
                         <div className="flex flex-col justify-center items-center">
-                            <Image src={Logo} alt="Ippon" width={100} />
+                            <Image src={Logomarca} alt="Ippon" width={100} />
                             <Typography className="text-sm font-normal mt-4">
                                 Sistema de gerenciamento e planejamento de aulas
                             </Typography>
