@@ -42,7 +42,6 @@ module.exports = {
                 warning: "#F0C268",
                 error: "#FF6464",
                 error_hover: "#d65353",
-                blue_two: "#34495E",
             },
             backgroundImage: {
                 "gradient-login": "linear-gradient(to top, #000000de, #525153cc), url(/img/bg-login.jpg)",

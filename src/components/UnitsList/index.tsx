@@ -66,7 +66,7 @@ export const UnitsList = ({ units = [], className }: IUnitList) => {
             </div>
             <div className={"grid grid-cols-3 gap-6 px-6 mt-4"}>
                 {units.map((unidade, index) => (
-                    <Unit key={index} />
+                    <Unit key={index} className="w-full" />
                 ))}
             </div>
         </div>

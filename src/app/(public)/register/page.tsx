@@ -38,10 +38,10 @@ export default async function Register() {
                         Foto de perfil
                     </Typography>
                 </div>
-                <div className="mt-8">
+                <div className="mt-8 w-full">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="w-full justify-center items-center gap-2">
-                            <div>
+                        <div className="flex flex-row gap-2 w-full">
+                            <div className="w-full">
                                 <Controller
                                     name="name"
                                     control={control}
@@ -56,6 +56,57 @@ export default async function Register() {
                                     )}
                                 />
                                 {errors.name && <Hint text={errors.name.message} />}
+                            </div>
+                            <div className="w-full">
+                                <Controller
+                                    name="last_name"
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Input
+                                            {...field}
+                                            id="last_name"
+                                            label="Sobrenome"
+                                            error={!!errors.last_name || !!errors.root}
+                                            icon={<User width={15} height={15} />}
+                                        />
+                                    )}
+                                />
+                                {errors.last_name && <Hint text={errors.last_name.message} />}
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-2 w-full">
+                            <div className="w-full">
+                                <Controller
+                                    name="email"
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Input
+                                            {...field}
+                                            id="email"
+                                            label="E-mail"
+                                            type="email"
+                                            error={!!errors.email || !!errors.root}
+                                            icon={<User width={15} height={15} />}
+                                        />
+                                    )}
+                                />
+                                {errors.email && <Hint text={errors.email.message} />}
+                            </div>
+                            <div className="w-full">
+                                <Controller
+                                    name="phone_number"
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Input
+                                            {...field}
+                                            id="phone_number"
+                                            label="Telefone"
+                                            error={!!errors.phone_number || !!errors.root}
+                                            icon={<User width={15} height={15} />}
+                                        />
+                                    )}
+                                />
+                                {errors.phone_number && <Hint text={errors.phone_number.message} />}
                             </div>
                         </div>
                     </form>

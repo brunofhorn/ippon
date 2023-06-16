@@ -14,7 +14,7 @@ type SelectFilterItem = {
 export interface IInput {
     id: string;
     label: string;
-    type?: "text" | "number" | "password";
+    type?: "text" | "number" | "password" | "email";
     value?: string;
     setValue?: (value: string) => void;
     onBlur?: (value: string) => void;

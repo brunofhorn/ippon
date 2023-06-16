@@ -20,7 +20,7 @@ export default function SidebarMenu() {
         <div
             className={`sticky top-0 h-screen bg-gray_five ${
                 open ? "w-36" : "w-16"
-            } duration-500 text-blue_two pl-4 relative`}
+            } duration-500 text-primary pl-4 relative`}
         >
             <Link href="/dashboard" className="flex items-center justify-center">
                 <Logo minimized={!open} className="mt-7 mb-5" />

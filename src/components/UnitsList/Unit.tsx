@@ -1,7 +1,8 @@
 import { Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 import { unit_menus } from "@/data/unit_menu";
 import Calendar from "@/icons/Calendar";
@@ -12,9 +13,10 @@ import { Badge } from "../Badge";
 import { Button } from "../Button";
 import { Typography } from "../Typography";
 
-export const Unit = () => {
+// eslint-disable-next-line react/prop-types
+export const Unit = ({ className = "" }: React.HTMLAttributes<HTMLDivElement>) => {
     return (
-        <div className="bg-gray_four h-[276px] w-[255px] px-2 pt-2 pb-4 rounded-3xl shadow-lg">
+        <div className={twMerge(className, "bg-gray_four h-[276px] px-2 pt-2 pb-4 rounded-3xl shadow-lg")}>
             <div className="bg-gray_three rounded-2xl p-2">
                 <div className="flex flex-row justify-between">
                     <div
@@ -92,22 +94,22 @@ export const Unit = () => {
                     <Typography variant="h6">Situação</Typography>
                     <Badge text="Ativo" type="success" className="text-white" />
                 </div>
-                <div className="flex flex-rol gap-4 mt-4">
+                <div className="grid grid-cols-2 gap-2 mt-4">
                     <Button
                         text="Turmas"
                         type="button"
                         variant="normal"
                         color="secondary"
                         handleClick={() => alert("TURMAS")}
-                        className="text-sm font-bold"
+                        className="text-xs font-bold"
                     />
                     <Button
                         text="Alunos"
                         type="button"
                         variant="normal"
-                        color="secondary"
+                        color="primary"
                         handleClick={() => alert("TURMAS")}
-                        className="text-sm font-bold"
+                        className="text-xs font-bold"
                     />
                 </div>
             </div>

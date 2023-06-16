@@ -12,6 +12,8 @@ export interface IButton extends React.HTMLAttributes<HTMLDivElement> {
     type?: "button" | "submit" | "reset";
     variant?: "normal" | "outline";
     color?: "primary" | "secondary" | "danger" | "default";
+    icon?: JSX.Element | React.ReactNode;
+    iconHover?: JSX.Element | React.ReactNode;
     handleClick?: () => void;
     disabled?: boolean;
 }

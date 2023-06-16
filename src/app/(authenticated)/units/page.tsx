@@ -8,15 +8,15 @@ import { EmptyPage } from "@/components/EmptyPage";
 import { TitlePage } from "@/components/TitlePage";
 import { Typography } from "@/components/Typography";
 import { UnitsList } from "@/components/UnitsList";
+import PlusCircle from "@/icons/PlusCircle";
 import { IUnits } from "@/interfaces/response";
 import { getUnits } from "@/services/units/getUnits";
 
 export default async function Units() {
-    const router = useRouter();
-    const units = [1, 2, 3, 4, 5];
+    const units = await getUnits();
 
     const handleNewUnit = () => {
-        router.push("/units/add-unit");
+        console.log("TESTE");
     };
 
     if (units.length < 0) {
@@ -43,7 +43,21 @@ export default async function Units() {
 
     return (
         <>
-            <TitlePage title="Unidades" subtitle="Lista de unidades cadastradas" />
+            <TitlePage
+                title="Unidades"
+                subtitle="Lista de unidades cadastradas"
+                button={
+                    units.length > 0
+                        ? {
+                              text: "Nova unidade",
+                              variant: "outline",
+                              color: "primary",
+                              icon: <PlusCircle />,
+                              iconHover: <PlusCircle color="#fff" />,
+                          }
+                        : undefined
+                }
+            />
             <Suspense fallback={<div>Loading...</div>}>
                 <UnitsList className="mt-8" units={units} />
             </Suspense>

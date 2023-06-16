@@ -12,5 +12,5 @@ export const menus: IMenuItem[] = [
     { name: "Alunos", link: "/students", icon: <User width={13} height={13} /> },
     { name: "Check-in", link: "/checkin", icon: <Checkin width={13} height={13} />, disable: true },
     { name: "Financeiro", link: "/financial", icon: <CreditCard width={13} height={13} />, disable: true },
-    { name: "Calendário", link: "/calendar", icon: <Calendar width={13} height={13} />, disable: true },
+    // { name: "Calendário", link: "/calendar", icon: <Calendar width={13} height={13} />, disable: true },
 ];
