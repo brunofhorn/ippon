@@ -162,7 +162,7 @@ export default async function Login() {
                                     <div className="mt-8 flex items-center justify-center gap-4 px-10">
                                         <Button
                                             text={"Cadastrar-se"}
-                                            color="secondary"
+                                            color="primary"
                                             handleClick={() => router.push("/register/")}
                                         />
                                         <Button text={"Login"} type={"submit"} disabled={!isValid} />

@@ -25,7 +25,7 @@ export default function SelectFilter({ id, value, label, placeholder, items = []
                     id={id}
                     name={id}
                     value={value}
-                    className="w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 shadow-sm focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary sm:text-sm"
+                    className="w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                     onChange={event => setQuery(event.target.value)}
                     displayValue={(person: any) => person?.name}
                     placeholder={placeholder ?? ""}
@@ -43,7 +43,7 @@ export default function SelectFilter({ id, value, label, placeholder, items = []
                                 className={({ active }) =>
                                     twMerge(
                                         "relative cursor-default select-none py-2 pl-8 pr-4",
-                                        active ? "bg-secondary text-white" : "text-gray-900",
+                                        active ? "bg-primary text-white" : "text-gray-900",
                                     )
                                 }
                             >
@@ -57,7 +57,7 @@ export default function SelectFilter({ id, value, label, placeholder, items = []
                                             <span
                                                 className={twMerge(
                                                     "absolute inset-y-0 left-0 flex items-center pl-1.5",
-                                                    active ? "text-white" : "text-secondary",
+                                                    active ? "text-white" : "text-primary",
                                                 )}
                                             >
                                                 <CheckIcon className="h-5 w-5" aria-hidden="true" />

@@ -12,11 +12,11 @@ export const metadata = {
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className="h-full bg-background">
-            <body className={`${nunito.className} h-full bg-background`}>
-                <section className="flex bg-background">
+        <html lang="en" className="h-full bg-gray_five">
+            <body className={`${nunito.className} h-full bg-gray_five`}>
+                <section className="flex bg-gray_five">
                     <SidebarMenu />
-                    <div className="flex flex-row ml-5 justify-between text-xl text-gray-900 font-semibold bg-whiteSideBar min-h-screen w-screen rounded-ss-3xl rounded-es-3xl shadow-bodyShadow">
+                    <div className="flex flex-row ml-5 justify-between text-xl text-gray-900 font-semibold bg-white_four min-h-screen w-screen rounded-ss-3xl rounded-es-3xl shadow-bodyShadow">
                         <div className="flex flex-col flex-1 p-10">{children}</div>
                         <div className="sticky top-0 bg-white p-6 h-screen rounded-ss-3xl rounded-es-3xl w-80 shadow-bodyShadow">
                             <Typography variant="h1">Como Funciona?</Typography>

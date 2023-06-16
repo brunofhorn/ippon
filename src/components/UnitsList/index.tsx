@@ -23,8 +23,8 @@ export const UnitsList = ({ units = [], className }: IUnitList) => {
     };
 
     return (
-        <div className={twMerge(className, "bg-background rounded-3xl pb-6 min-h-screen w-full")}>
-            <div id="filter-units" className="bg-badgeWhiteGray border border-badgeGray rounded-2xl px-6 py-4">
+        <div className={twMerge(className, "bg-gray_five rounded-3xl pb-6 min-h-screen w-full")}>
+            <div id="filter-units" className="bg-white_three border border-white_two rounded-2xl px-6 py-4">
                 <form className="grid grid-cols-3 gap-4" onSubmit={handleSubmit(onSubmit)}>
                     <Controller
                         name="unit"

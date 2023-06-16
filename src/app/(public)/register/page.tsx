@@ -10,7 +10,7 @@ export default async function Register() {
             <div className="flex flex-col justify-center items-center">
                 <div
                     id="select-avatar"
-                    className="bg-background py-2 px-4 rounded-2xl w-24 h-24 flex justify-center items-center"
+                    className="bg-gray_five py-2 px-4 rounded-2xl w-24 h-24 flex justify-center items-center"
                 >
                     <div className="h-14 w-14 bg-[#969AA3] rounded-full">
                         <Camera />

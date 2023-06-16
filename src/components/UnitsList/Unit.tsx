@@ -14,12 +14,12 @@ import { Typography } from "../Typography";
 
 export const Unit = () => {
     return (
-        <div className="bg-iceWhite h-[276px] w-[255px] px-2 pt-2 pb-4 rounded-3xl shadow-lg">
-            <div className="bg-disabled rounded-2xl p-2">
+        <div className="bg-gray_four h-[276px] w-[255px] px-2 pt-2 pb-4 rounded-3xl shadow-lg">
+            <div className="bg-gray_three rounded-2xl p-2">
                 <div className="flex flex-row justify-between">
                     <div
                         id="logo"
-                        className="w-[103px] h-[78px] px-2 py-4 rounded-2xl bg-background flex flex-col justify-center items-center"
+                        className="w-[103px] h-[78px] px-2 py-4 rounded-2xl bg-gray_five flex flex-col justify-center items-center"
                     >
                         <Image src={AvatarLogo} alt="" width={38} height={38} />
                         <Typography variant="span" className="font-bold mt-2">
@@ -28,7 +28,7 @@ export const Unit = () => {
                     </div>
                     <Menu as="div" className="relative inline-block text-left">
                         <div>
-                            <Menu.Button className="w-6 h-6 rounded-lg bg-iceWhite flex justify-center items-center">
+                            <Menu.Button className="w-6 h-6 rounded-lg bg-gray_four flex justify-center items-center">
                                 <IconDots />
                             </Menu.Button>
                         </div>
@@ -49,7 +49,7 @@ export const Unit = () => {
                                                 <a
                                                     onClick={menu.onClick}
                                                     className={`${
-                                                        active ? "bg-primary text-white" : "text-gray-900"
+                                                        active ? "bg-secondary text-white" : "text-gray-900"
                                                     } cursor-pointer group flex w-full gap-2 items-center rounded-md px-2 py-2 text-sm`}
                                                 >
                                                     {active ? <>{menu.iconHover}</> : <>{menu.icon}</>}
@@ -97,7 +97,7 @@ export const Unit = () => {
                         text="Turmas"
                         type="button"
                         variant="normal"
-                        color="primary"
+                        color="secondary"
                         handleClick={() => alert("TURMAS")}
                         className="text-sm font-bold"
                     />

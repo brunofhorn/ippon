@@ -8,9 +8,9 @@ interface ITypography extends React.PropsWithChildren {
 
 const defaultStyles = {
     p: "text-xs font-normal", // FONT 12 - 400
-    h1: "text-2xl font-bold text-darkGray", // FONT 24 - 700
+    h1: "text-2xl font-bold text-black_two", // FONT 24 - 700
     h2: "text-base font-normal", // FONT 16 - 400
-    h3: "text-base font-normal text-whiteGray", // FONT 16 - 400
+    h3: "text-base font-normal text-gray_six", // FONT 16 - 400
     h4: "",
     h5: "",
     h6: "text-sm font-normal", // FONT 14 - 400

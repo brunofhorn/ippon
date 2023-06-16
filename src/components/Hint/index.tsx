@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { IHint } from "@/interfaces/components";
 
 const colors = {
-    danger: "text-danger",
+    danger: "text-error",
     success: "text-success",
     info: "text-info",
     warning: "text-warning",

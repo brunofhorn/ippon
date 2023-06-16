@@ -16,10 +16,10 @@ export const Menu = ({ items = [], isOpen }: IMenu) => {
                 >
                     <div
                         className={`
-                            p-2 border-disabled border rounded-lg hover:shadow-lg
-                            ${menu.extra ? "bg-white" : "bg-iceWhite"}
+                            p-2 border-gray_three border rounded-lg hover:shadow-lg
+                            ${menu.extra ? "bg-white" : "bg-gray_four"}
                             ${menu.disable && "opacity-30"}
-                            ${menu.link === pathname && "bg-disabled shadow-lg"}
+                            ${menu.link === pathname && "bg-gray_three shadow-lg"}
                             group-hover:shadow-lg
                         `}
                     >
@@ -28,7 +28,7 @@ export const Menu = ({ items = [], isOpen }: IMenu) => {
                     <h2
                         style={{ transitionDelay: `${i + 2}00ms` }}
                         className={`
-                            whitespace-pre duration-500 text-darkBlue 
+                            whitespace-pre duration-500 text-blue_two 
                             ${!isOpen && "opacity-0 translate-x-28 overflow-hidden"}
                             ${menu.disable && "opacity-30"}
                             ${menu.link === pathname && "font-extrabold"}
@@ -42,7 +42,7 @@ export const Menu = ({ items = [], isOpen }: IMenu) => {
                             isOpen && "hidden"
                         } absolute left-48 z-50 group-hover:p-1 hover:font-extrabold drop-shadow-lg w-0 overflow-hidden group-hover:left-14 group-hover:duration-300 group-hover:w-fit flex`}
                     >
-                        <h2 className="bg-darkBlue whitespace-pre text-white font-bold rounded-md px-0 py-0 group-hover:px-2 group-hover:py-1">
+                        <h2 className="bg-blue_two whitespace-pre text-white font-bold rounded-md px-0 py-0 group-hover:px-2 group-hover:py-1">
                             {menu?.name}
                         </h2>
                     </div>

@@ -15,23 +15,23 @@ export const Timeline = ({ className }: React.HTMLAttributes<HTMLDivElement>) =>
                         <div className="relative pb-4">
                             {eventIdx !== timeline.length - 1 ? (
                                 <span
-                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-transparent border-dotted border-l-4 border-disabled"
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-transparent border-dotted border-l-4 border-gray_three"
                                     aria-hidden="true"
                                 />
                             ) : null}
                             <div className="relative flex space-x-3">
                                 <div>
                                     <span
-                                        className={`bg-background h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white`}
+                                        className={`bg-gray_five h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white`}
                                     >
                                         {event.icon}
                                     </span>
                                 </div>
                                 <div className="flex flex-col min-w-0 flex-1 justify-between pt-1.5">
-                                    <Typography variant="span" className="text-darkGray font-bold">
+                                    <Typography variant="span" className="text-black_two font-bold">
                                         {event.title}
                                     </Typography>
-                                    <Typography variant="span" className="text-textBadge mt-1">
+                                    <Typography variant="span" className="text-black_three mt-1">
                                         {event.description}
                                     </Typography>
                                     {event.badge || event.link ? (

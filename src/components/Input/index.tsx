@@ -29,7 +29,7 @@ export const Input = forwardRef<HTMLInputElement, IInput>(
                     w-full 
                     rounded-[7px] 
                     border
-                    ${error ? "border-danger" : "border-defaultGray"} 
+                    ${error ? "border-error" : "border-gray_two"} 
                     bg-transparent 
                     px-3 
                     py-2.5 
@@ -38,9 +38,9 @@ export const Input = forwardRef<HTMLInputElement, IInput>(
                     outline 
                     outline-0 
                     transition-all 
-                    ${error ? "placeholder:text-danger" : "placeholder:text-defaultGray"}
+                    ${error ? "placeholder:text-error" : "placeholder:text-gray_two"}
                     hover:border-black
-                    ${error ? "focus:border-danger" : "focus:border-yellow-500"}
+                    ${error ? "focus:border-error" : "focus:border-yellow-500"}
                     focus:border-t-transparent 
                     ${value !== "" && "border-t-transparent hover:border-t-transparent"} 
                     focus:outline-0 
@@ -73,7 +73,7 @@ export const Input = forwardRef<HTMLInputElement, IInput>(
                     text-[11px]
                     font-normal
                     leading-tight
-                    ${error ? "text-danger" : "text-black"}
+                    ${error ? "text-error" : "text-black"}
                     transition-all
                     before:pointer-events-none
                     before:mt-[6.5px]
@@ -109,13 +109,13 @@ export const Input = forwardRef<HTMLInputElement, IInput>(
                     peer-placeholder-shown:after:border-transparent
                     peer-focus:text-[11px]
                     peer-focus:leading-tight
-                    ${error ? "peer-focus:text-danger" : "peer-focus:text-yellow-500"}
+                    ${error ? "peer-focus:text-error" : "peer-focus:text-yellow-500"}
                     peer-focus:before:border-t
                     peer-focus:before:border-l
-                    ${error ? "peer-focus:before:border-danger" : "peer-focus:before:border-yellow-500"}
+                    ${error ? "peer-focus:before:border-error" : "peer-focus:before:border-yellow-500"}
                     peer-focus:after:border-t
                     peer-focus:after:border-r
-                    ${error ? "peer-focus:after:border-danger" : "peer-focus:after:border-yellow-500"}
+                    ${error ? "peer-focus:after:border-error" : "peer-focus:after:border-yellow-500"}
                     peer-disabled:text-transparent
                     peer-disabled:before:border-transparent
                     peer-disabled:after:border-transparent

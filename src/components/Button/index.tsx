@@ -5,15 +5,15 @@ import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 
 const buttonStyles = {
     normal: {
-        primary: "bg-primary hover:bg-primaryHover text-textBlack",
-        secondary: "bg-secondary hover:bg-secondaryHover text-white",
-        danger: "bg-danger hover:bg-dangerHover text-white",
+        primary: "bg-primary hover:bg-primary_hover text-black_four",
+        secondary: "bg-secondary hover:bg-secondary_hover text-white",
+        danger: "bg-error hover:bg-error_hover text-white",
         default: "",
     },
     outline: {
-        primary: "bg-white border-primary hover:bg-primary text-textBlack",
-        secondary: "bg-white border-secondary hover:bg-secondary hover:text-white text-textBlack ",
-        danger: "bg-danger hover:bg-dangerHover text-white",
+        primary: "bg-white border-primary hover:bg-primary text-black_four",
+        secondary: "bg-white border-secondary hover:bg-secondary hover:text-white text-black_four ",
+        danger: "bg-error hover:bg-error_hover text-white",
         default: "",
     },
 };
@@ -22,7 +22,7 @@ export const Button = ({
     text,
     type = "button",
     variant = "normal",
-    color = "primary",
+    color = "secondary",
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     handleClick = () => {},
     disabled = false,
@@ -33,7 +33,7 @@ export const Button = ({
             className={twMerge(
                 className,
                 buttonStyles[variant][color],
-                "py-2 px-6 rounded-lg w-full font-bold disabled:bg-disabled disabled:text-defaultGray",
+                "py-2 px-6 rounded-lg w-full font-bold disabled:bg-gray_three disabled:text-gray_two",
             )}
             type={type}
             onClick={handleClick}
