@@ -19,6 +19,7 @@ export interface IInput {
     value?: string;
     setValue?: (value: string) => void;
     onBlur?: (value: string) => void;
+    onChange?: () => void;
     maxLength?: number;
     icon?: any;
     onClickIcon?: () => void;

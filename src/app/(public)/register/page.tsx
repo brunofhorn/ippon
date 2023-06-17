@@ -1,7 +1,7 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 
 import { Hint } from "@/components/Hint";
@@ -18,10 +18,13 @@ import { UserRegisterForm, UserRegisterScheme } from "@/services/validations/use
 
 export default async function Register() {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const [registerNumberMask, setRegisterNumberMask] = useState("cpf");
     const {
         control,
         handleSubmit,
         formState: { errors },
+        setValue,
+        getValues,
     } = useForm<UserRegisterForm>({
         defaultValues: {
             name: "",
@@ -37,6 +40,18 @@ export default async function Register() {
 
     const onSubmit = async (data: UserRegisterForm) => {
         console.log(data);
+    };
+
+    const handleRegisterNumberChange = () => {
+        const inputValue = getValues("registerNumber") ?? "";
+        const cleanedValue = inputValue?.replace(/[^\d]/g, "");
+        setValue("registerNumber", cleanedValue);
+
+        if (cleanedValue.length > 10) {
+            setRegisterNumberMask("cnpj");
+        } else {
+            setRegisterNumberMask("cpf");
+        }
     };
 
     return (
@@ -131,8 +146,10 @@ export default async function Register() {
                                         id="registerNumber"
                                         label="CPF / CNPJ"
                                         type="text"
+                                        mask={registerNumberMask}
                                         error={!!errors.registerNumber || !!errors.root}
                                         icon={<Document width={15} height={15} />}
+                                        onChange={handleRegisterNumberChange}
                                     />
                                 )}
                             />
