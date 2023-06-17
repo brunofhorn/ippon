@@ -8,7 +8,7 @@ import { EmptyPage } from "@/components/EmptyPage";
 import { TitlePage } from "@/components/TitlePage";
 import { Typography } from "@/components/Typography";
 import { UnitsList } from "@/components/UnitsList";
-import PlusCircle from "@/icons/PlusCircle";
+import PlusCircle from "@/icons/solid/PlusCircle";
 import { IUnits } from "@/interfaces/response";
 import { getUnits } from "@/services/units/getUnits";
 

@@ -38,5 +38,25 @@ export interface IEmptyPage extends React.HTMLAttributes<HTMLDivElement> {
 
 export interface IUnitList extends React.HTMLAttributes<HTMLDivElement> {
     // units?: IUnits[];
-    units?: any[];
+    units?: IUnit[];
+}
+
+export interface IUnit {
+    id?: number;
+    avatar?: string;
+    unitName?: string;
+    responsibleName?: string;
+    zipCode?: string;
+    address?: string;
+    number?: string;
+    complement?: string;
+    neighborhood?: string;
+    city?: string;
+    state?: string;
+    phone?: string;
+    email?: string;
+}
+
+export interface IUnitPage extends React.HTMLAttributes<HTMLDivElement> {
+    unit: IUnit;
 }

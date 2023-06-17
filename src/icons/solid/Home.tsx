@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ISvgIcon } from "../interfaces/icons";
+import { ISvgIcon } from "@/interfaces/icons";
 
 export default function Home({ color = "#34495E", width = 14, height = 14 }: ISvgIcon) {
     return (

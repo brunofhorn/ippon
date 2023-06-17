@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ISvgIcon } from "../interfaces/icons";
+import { ISvgIcon } from "@/interfaces/icons";
 
 export default function Eye({ color = "#1D1D1D", width = 20, height = 14 }: ISvgIcon) {
     return (

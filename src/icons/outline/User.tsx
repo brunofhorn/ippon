@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ISvgIcon } from "../interfaces/icons";
+import { ISvgIcon } from "@/interfaces/icons";
 
 export default function User({ color = "#1D1D1D", width = 18, height = 20 }: ISvgIcon) {
     return (

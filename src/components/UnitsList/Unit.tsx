@@ -7,6 +7,7 @@ import React, { Fragment } from "react";
 import { unit_menus } from "@/data/unit_menu";
 import Calendar from "@/icons/Calendar";
 import IconDots from "@/icons/IconDots";
+import { IUnitPage } from "@/interfaces/components";
 import { AvatarExemplo, AvatarLogo } from "@/utils/images";
 
 import { Badge } from "../Badge";
@@ -14,7 +15,7 @@ import { Button } from "../Button";
 import { Typography } from "../Typography";
 
 // eslint-disable-next-line react/prop-types
-export const Unit = ({ className = "" }: React.HTMLAttributes<HTMLDivElement>) => {
+export const Unit = ({ unit, className = "" }: IUnitPage) => {
     return (
         <div className={twMerge(className, "bg-gray_four h-[276px] px-2 pt-2 pb-4 rounded-3xl shadow-lg")}>
             <div className="bg-gray_three rounded-2xl p-2">
@@ -25,7 +26,7 @@ export const Unit = ({ className = "" }: React.HTMLAttributes<HTMLDivElement>) =
                     >
                         <Image src={AvatarLogo} alt="" width={38} height={38} />
                         <Typography variant="span" className="font-bold mt-2">
-                            Combat club
+                            {unit.unitName}
                         </Typography>
                     </div>
                     <Menu as="div" className="relative inline-block text-left">

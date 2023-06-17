@@ -5,9 +5,9 @@ import { useState } from "react";
 
 import { extra_menus } from "@/data/extra_menu";
 import { menus } from "@/data/menu";
-import AvatarDefault from "@/icons/AvatarDefault";
-import CloseMenu from "@/icons/CloseMenu";
-import OpenMenu from "@/icons/OpenMenu";
+import AvatarDefault from "@/icons/solid/AvatarDefault";
+import CloseMenu from "@/icons/solid/CloseMenu";
+import OpenMenu from "@/icons/solid/OpenMenu";
 
 import { Logo } from "../Logo";
 import { Typography } from "../Typography";

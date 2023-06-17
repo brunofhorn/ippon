@@ -1,16 +1,22 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 
 import { Hint } from "@/components/Hint";
 import { Input } from "@/components/Input";
 import { Typography } from "@/components/Typography";
-import Camera from "@/icons/Camera";
-import User from "@/icons/User";
+import Document from "@/icons/outline/Document";
+import Email from "@/icons/outline/Email";
+import Eye from "@/icons/outline/Eye";
+import Phone from "@/icons/outline/Phone";
+import User from "@/icons/outline/User";
+import Camera from "@/icons/solid/Camera";
 import { UserRegisterForm, UserRegisterScheme } from "@/services/validations/user.register.scheme";
 
 export default async function Register() {
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const {
         control,
         handleSubmit,
@@ -19,6 +25,11 @@ export default async function Register() {
         defaultValues: {
             name: "",
             last_name: "",
+            email: "",
+            phone_number: "",
+            registerNumber: "",
+            password: "",
+            confirm_password: "",
         },
         resolver: zodResolver(UserRegisterScheme),
     });
@@ -39,7 +50,7 @@ export default async function Register() {
                     </Typography>
                 </div>
                 <div className="mt-8 w-full">
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
                         <div className="flex flex-row gap-2 w-full">
                             <div className="w-full">
                                 <Controller
@@ -86,7 +97,7 @@ export default async function Register() {
                                             label="E-mail"
                                             type="email"
                                             error={!!errors.email || !!errors.root}
-                                            icon={<User width={15} height={15} />}
+                                            icon={<Email width={15} height={15} />}
                                         />
                                     )}
                                 />
@@ -102,11 +113,63 @@ export default async function Register() {
                                             id="phone_number"
                                             label="Telefone"
                                             error={!!errors.phone_number || !!errors.root}
-                                            icon={<User width={15} height={15} />}
+                                            icon={<Phone width={15} height={15} />}
                                         />
                                     )}
                                 />
                                 {errors.phone_number && <Hint text={errors.phone_number.message} />}
+                            </div>
+                        </div>
+                        <div className="w-full">
+                            <Controller
+                                name="registerNumber"
+                                control={control}
+                                render={({ field }) => (
+                                    <Input
+                                        {...field}
+                                        id="registerNumber"
+                                        label="CPF / CNPJ"
+                                        type="text"
+                                        error={!!errors.registerNumber || !!errors.root}
+                                        icon={<Document width={15} height={15} />}
+                                    />
+                                )}
+                            />
+                            {errors.registerNumber && <Hint text={errors.registerNumber.message} />}
+                        </div>
+                        <div className="flex flex-row gap-2 w-full">
+                            <div className="w-full">
+                                <Controller
+                                    name="password"
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Input
+                                            {...field}
+                                            id="password"
+                                            label="Senha"
+                                            type="password"
+                                            error={!!errors.password || !!errors.root}
+                                            icon={<Eye width={15} height={15} />}
+                                        />
+                                    )}
+                                />
+                                {errors.password && <Hint text={errors.password.message} />}
+                            </div>
+                            <div className="w-full">
+                                <Controller
+                                    name="confirm_password"
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Input
+                                            {...field}
+                                            id="confirm_password"
+                                            label="Confirmar Senha"
+                                            error={!!errors.confirm_password || !!errors.root}
+                                            icon={<Eye width={15} height={15} />}
+                                        />
+                                    )}
+                                />
+                                {errors.confirm_password && <Hint text={errors.confirm_password.message} />}
                             </div>
                         </div>
                     </form>
