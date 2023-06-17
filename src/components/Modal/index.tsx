@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 
 import { Fragment } from "react";
 
-import Eye from "@/icons/Eye";
+import Eye from "@/icons/outline/Eye";
 import { IModal } from "@/interfaces/components";
 
 import { Button } from "../Button";

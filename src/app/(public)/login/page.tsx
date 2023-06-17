@@ -16,9 +16,9 @@ import { Loading } from "@/components/Loading";
 import { Modal } from "@/components/Modal";
 import { Typography } from "@/components/Typography";
 import { useAuthContext } from "@/contexts/AuthContext";
-import Eye from "@/icons/Eye";
-import EyeClose from "@/icons/EyeClose";
-import User from "@/icons/User";
+import Eye from "@/icons/outline/Eye";
+import EyeClose from "@/icons/outline/EyeClose";
+import User from "@/icons/outline/User";
 import { IModal } from "@/interfaces/components";
 import { Logomarca } from "@/utils/images";
 

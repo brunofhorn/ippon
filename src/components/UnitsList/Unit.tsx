@@ -5,8 +5,8 @@ import { twMerge } from "tailwind-merge";
 import React, { Fragment } from "react";
 
 import { unit_menus } from "@/data/unit_menu";
-import Calendar from "@/icons/Calendar";
-import IconDots from "@/icons/IconDots";
+import Calendar from "@/icons/outline/Calendar";
+import IconDots from "@/icons/outline/IconDots";
 import { IUnitPage } from "@/interfaces/components";
 import { AvatarExemplo, AvatarLogo } from "@/utils/images";
 
