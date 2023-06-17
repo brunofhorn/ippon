@@ -1,7 +1,7 @@
-import Config from "@/icons/Config";
-import InfoCircle from "@/icons/InfoCircle";
-import Lamp from "@/icons/Lamp";
-import Logout from "@/icons/Logout";
+import Config from "@/icons/outline/Config";
+import InfoCircle from "@/icons/outline/InfoCircle";
+import Lamp from "@/icons/outline/Lamp";
+import Logout from "@/icons/outline/Logout";
 import { IMenuItem } from "@/interfaces/menu";
 
 export const extra_menus: IMenuItem[] = [

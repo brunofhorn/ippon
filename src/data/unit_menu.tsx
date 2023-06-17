@@ -1,9 +1,8 @@
-import Calendar from "@/icons/Calendar";
-import Home from "@/icons/Home";
-import Trash from "@/icons/Trash";
-import User from "@/icons/User";
-import Users from "@/icons/Users";
-import XClose from "@/icons/XClose";
+import Trash from "@/icons/outline/Trash";
+import User from "@/icons/outline/User";
+import Users from "@/icons/outline/Users";
+import XClose from "@/icons/outline/XClose";
+import Home from "@/icons/solid/Home";
 
 export const unit_menus = [
     {

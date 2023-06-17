@@ -1,9 +1,8 @@
-import Calendar from "@/icons/Calendar";
-import Checkin from "@/icons/Checkin";
-import CreditCard from "@/icons/CreditCard";
-import Home from "@/icons/Home";
-import User from "@/icons/User";
-import Users from "@/icons/Users";
+import Checkin from "@/icons/outline/Checkin";
+import CreditCard from "@/icons/outline/CreditCard";
+import User from "@/icons/outline/User";
+import Users from "@/icons/outline/Users";
+import Home from "@/icons/solid/Home";
 import { IMenuItem } from "@/interfaces/menu";
 
 export const menus: IMenuItem[] = [

@@ -1,7 +1,7 @@
 import { Badge } from "@/components/Badge";
-import Store from "@/icons/Store";
-import StudentCap from "@/icons/StudentCap";
-import Users from "@/icons/Users";
+import Store from "@/icons/outline/Store";
+import StudentCap from "@/icons/outline/StudentCap";
+import Users from "@/icons/outline/Users";
 
 type ITimelineData = {
     id: number;
