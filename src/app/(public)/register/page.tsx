@@ -10,6 +10,7 @@ import { Typography } from "@/components/Typography";
 import Document from "@/icons/outline/Document";
 import Email from "@/icons/outline/Email";
 import Eye from "@/icons/outline/Eye";
+import EyeClose from "@/icons/outline/EyeClose";
 import Phone from "@/icons/outline/Phone";
 import User from "@/icons/outline/User";
 import Camera from "@/icons/solid/Camera";
@@ -147,9 +148,16 @@ export default async function Register() {
                                             {...field}
                                             id="password"
                                             label="Senha"
-                                            type="password"
                                             error={!!errors.password || !!errors.root}
-                                            icon={<Eye width={15} height={15} />}
+                                            type={isPasswordVisible ? "text" : "password"}
+                                            icon={
+                                                isPasswordVisible ? (
+                                                    <Eye width={15} height={15} />
+                                                ) : (
+                                                    <EyeClose width={15} height={15} />
+                                                )
+                                            }
+                                            onClickIcon={() => setIsPasswordVisible(!isPasswordVisible)}
                                         />
                                     )}
                                 />
@@ -165,7 +173,15 @@ export default async function Register() {
                                             id="confirm_password"
                                             label="Confirmar Senha"
                                             error={!!errors.confirm_password || !!errors.root}
-                                            icon={<Eye width={15} height={15} />}
+                                            type={isPasswordVisible ? "text" : "password"}
+                                            icon={
+                                                isPasswordVisible ? (
+                                                    <Eye width={15} height={15} />
+                                                ) : (
+                                                    <EyeClose width={15} height={15} />
+                                                )
+                                            }
+                                            onClickIcon={() => setIsPasswordVisible(!isPasswordVisible)}
                                         />
                                     )}
                                 />

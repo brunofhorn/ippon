@@ -3,9 +3,26 @@
 import React, { forwardRef } from "react";
 
 import { IInput } from "@/interfaces/form";
+import { getMask } from "@/utils/getMask";
 
 export const Input = forwardRef<HTMLInputElement, IInput>(
-    ({ id, label, type = "text", value, setValue, onBlur, maxLength, icon = "", onClickIcon, error, ...rest }, ref) => {
+    (
+        {
+            id,
+            label,
+            type = "text",
+            mask = "",
+            value,
+            setValue,
+            onBlur,
+            maxLength,
+            icon = "",
+            onClickIcon,
+            error,
+            ...rest
+        },
+        ref,
+    ) => {
         const handleClickIcon = () => {
             onClickIcon?.();
         };
@@ -56,6 +73,7 @@ export const Input = forwardRef<HTMLInputElement, IInput>(
                     onChange={e => (setValue ? setValue(e.target.value) : null)}
                     onBlur={e => (onBlur ? onBlur(e.target.value) : () => {})}
                     maxLength={maxLength}
+                    pattern={getMask(mask)}
                     {...rest}
                 />
                 <label
