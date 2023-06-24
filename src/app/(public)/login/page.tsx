@@ -21,11 +21,6 @@ import { IModal } from "@/interfaces/components";
 import { UserLoginForm, UserLoginScheme } from "@/services/validations/user.login.scheme";
 import { Logomarca } from "@/utils/images";
 
-export const metadata = {
-    title: "Login - Ippon",
-    description: "Gerenciamento de Academias de Artes Marciais",
-};
-
 export default async function Login() {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const router = useRouter();
