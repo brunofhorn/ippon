@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Input } from "@material-tailwind/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -9,7 +10,6 @@ import { useForm, Controller } from "react-hook-form";
 
 import { Button } from "@/components/Button";
 import { Hint } from "@/components/Hint";
-import { Input } from "@/components/Input";
 import { Loading } from "@/components/Loading";
 import { Modal } from "@/components/Modal";
 import { Typography } from "@/components/Typography";
@@ -120,13 +120,14 @@ export default async function Login() {
                                             label="Senha"
                                             type={passwordVisible ? "text" : "password"}
                                             icon={
-                                                passwordVisible ? (
-                                                    <Eye width={15} height={15} />
-                                                ) : (
-                                                    <EyeClose width={15} height={15} />
-                                                )
+                                                <button onClick={() => setPasswordVisible(!passwordVisible)}>
+                                                    {passwordVisible ? (
+                                                        <Eye width={15} height={15} />
+                                                    ) : (
+                                                        <EyeClose width={15} height={15} />
+                                                    )}
+                                                </button>
                                             }
-                                            onClickIcon={() => setPasswordVisible(!passwordVisible)}
                                             error={!!errors.password || !!errors.root}
                                         />
                                     )}

@@ -13,7 +13,7 @@ import { IUnits } from "@/interfaces/response";
 import { getUnits } from "@/services/units/getUnits";
 
 export default async function Units() {
-    const units = await getUnits();
+    const units: any[] = [];
 
     const handleNewUnit = () => {
         console.log("TESTE");

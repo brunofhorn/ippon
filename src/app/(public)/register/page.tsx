@@ -149,7 +149,6 @@ export default async function Register() {
                                         mask={registerNumberMask}
                                         error={!!errors.registerNumber || !!errors.root}
                                         icon={<Document width={15} height={15} />}
-                                        onChange={handleRegisterNumberChange}
                                     />
                                 )}
                             />
